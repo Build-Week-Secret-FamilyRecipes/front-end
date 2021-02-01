@@ -4,6 +4,7 @@ import Header from "./components/Header"
 import PrivateRoute from "./components/PrivateRoute"
 import RecipeForm from "./components/RecipeForm"
 import Login from "./components/Login"
+import './App.css'
 
 
 
@@ -12,7 +13,6 @@ function App() {
   return (
 
     <div className="App">
-      <Home />
       <Header/>
       <Route exact path="/" component={Home} />
       <Route exact path="/login" component={Login} />

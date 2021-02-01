@@ -22,7 +22,6 @@ const Home = () => {
 
            <RightBottom>
 
-                <Nav><NavButtons>Sign In</NavButtons> <NavButtons>Sign Up</NavButtons></Nav>
 
                <TopDiv>
                     <H1>Anyone can go out and buy a cookbook these days, but you want a place to store all your secret family recipes, handed down from generation to generation.</H1>
@@ -103,7 +102,7 @@ const StyledPage = styled.div`
 const LeftTop = styled.div `
     position:fixed;
     display:flex;
-    max-width:30%;
+    max-width:40%;
     height:1280px;
     background-color:darkgray;
     background-image: url(${backgroundImage});
@@ -146,9 +145,9 @@ const RightBottom = styled.div`
     flex-direction: column;
     align-content:center;
     align-items:center;
-    width:80%;
+    width:100%;
     position:inherit;
-    margin-left:30%;
+    margin-left:35%;
     padding-bottom:2rem;
 `
 
