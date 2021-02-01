@@ -5,6 +5,7 @@ import Header from "./components/Header"
 import PrivateRoute from "./components/PrivateRoute"
 import RecipeForm from "./components/RecipeForm"
 import Login from "./components/Login"
+import Register from './components/Register';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Header/>
       <Route exact path="/" component={Home} />
       <Route exact path="/login" component={Login} />
+      <Route path='/register' component={Register} />
       <PrivateRoute path = "/protected" component = {RecipeForm}/>
     </div>
   );
