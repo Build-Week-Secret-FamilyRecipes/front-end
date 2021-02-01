@@ -16,6 +16,8 @@ const Home = () => {
 
            <RightBottom>
 
+                <Nav><NavButtons>Sign In</NavButtons> <NavButtons>Sign Up</NavButtons></Nav>
+
                <TopDiv>
                     <H1>Anyone can go out and buy a cookbook these days, but you want a place to store all your secret family recipes, handed down from generation to generation.</H1>
                     <p>The little cards grandma wrote her recipes on in her beautiful cursive are getting lost or are hard to read. You need somewhere secure to keep my recipes with me forever!</p>
@@ -79,16 +81,18 @@ export default Home;
 const StyledPage = styled.div`
     display:flex;
     flex-direction:row;
-    height:100vh;
     font-weight:200;
     max-width:100%;
+    max-height:100vh;
     
 
 `
 
 const LeftTop = styled.div `
-    height:160vh;
-    width:30%;
+    position:fixed;
+    display:flex;
+    max-width:30%;
+    height:1280px;
     background-color:darkgray;
 `
 
@@ -109,6 +113,18 @@ const TopDiv = styled.div`
 `
 
 
+const Nav = styled.nav`
+    margin:2% 0 1% 75%;
+`
+
+const NavButtons = styled.button`
+    border:solid lightgray 1px;
+    border-radius:8px;
+    padding:12px 20px;
+    background:none;
+    margin:5px;
+    
+`
 
 
 const RightBottom = styled.div`
@@ -117,6 +133,8 @@ const RightBottom = styled.div`
     align-content:center;
     align-items:center;
     width:80%;
+    position:inherit;
+    margin-left:30%;
     padding-bottom:2rem;
 `
 
@@ -148,22 +166,26 @@ const H2 = styled.h2`
 const TLH2 = styled.h2`
     margin-top:12rem;
     margin-left:5rem;
-    width:80%;
+    text-align:right;
+    max-width:70%;
+    font-size:1rem;
+    width:70%;
 `
 
 const ParDiv = styled.div`
     margin-top:2rem;
     display:flex;
-    width:80%;
-    flex-wrap:wrap;
+    width:100%;
     align-items:center;
+    flex-wrap:wrap;
     justify-content:left;
   
 `
 
 const IndivPars = styled.div`
     justify-content:space-evenly;
-    padding-right:12rem;
+    padding-right:5rem;
+    width:37%;
     padding-bottom:5rem;
     font-size:.8rem;
 
@@ -175,5 +197,5 @@ const ButtonBottom = styled.button `
     padding:1.5rem;
     background:none;
     font-size:.8rem;
-    width:15%;
+    width:25%;
 `
