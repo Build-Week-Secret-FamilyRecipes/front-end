@@ -77,6 +77,7 @@ const Register = (props) => {
                 value={formValues.age}
                 onChange={handleChange}
                 />
+                <button>Submit</button>
             </form>
         </div>
     )
