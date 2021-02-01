@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import axios from "axios"
-
+import { Link } from 'react-router-dom';
 
 const initialFormValues = {
     username: "",
@@ -31,6 +31,7 @@ function Login(props) {
         })
     }
     return (
+        localStorage.getItem(!'token') ? 
         <div>
             <form onSubmit = {login}>
                 <label> Username:
@@ -49,6 +50,9 @@ function Login(props) {
                 </label>
                 <button>Submit</button>
             </form>
+        </div> : 
+        <div>You are already logged in
+            <Link to='/protected'>Redirect to Dashboard</Link>
         </div>
     )
 }
