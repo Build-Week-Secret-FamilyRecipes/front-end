@@ -1,7 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 import backgroundImage from '../images/bg.jpg'
-
+import img1 from '../images/01.jpg'
+import img2 from '../images/02.jpg'
+import img3 from '../images/03.jpg'
+import img4 from '../images/04.jpg'
+import img5 from '../images/05.jpg'
+import img6 from '../images/06.jpg'
 
 
 const Home = () => {
@@ -9,7 +14,8 @@ const Home = () => {
     return(
         <StyledPage>
 
-            <LeftTop>
+            <LeftTop >
+
                 <TLH2><Span>Secret Family Recipes</Span>, your place for generation after generation of tradition</TLH2>
 
             </LeftTop>
@@ -33,31 +39,37 @@ const Home = () => {
                    <ParDiv>
 
                         <IndivPars>
+                            <Img src={img1}/>
                             <h4>Magna sed consequat tempus</h4>
                             <p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
                         </IndivPars>
 
                         <IndivPars>
+                            <Img src={img2}/>   
                             <h4>Ultricies lacinia interdum</h4>
                             <p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
                         </IndivPars>
 
                         <IndivPars>
+                            <Img src={img3}/>
                             <h4>Tortor metus commodo</h4>
                             <p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
                         </IndivPars>
 
                         <IndivPars>
+                            <Img src={img4}/>
                             <h4>Quam neque phasellus</h4>
                             <p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
                         </IndivPars>
 
                         <IndivPars>
+                            <Img src={img5}/>
                             <h4>Nunc enim commodo aliquet</h4>
                             <p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
                         </IndivPars>
 
                         <IndivPars>
+                            <Img src={img6}/>
                             <h4>Risus ornare lacinia</h4>
                             <p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
                         </IndivPars>
@@ -94,10 +106,12 @@ const LeftTop = styled.div `
     max-width:30%;
     height:1280px;
     background-color:darkgray;
+    background-image: url(${backgroundImage});
 `
 
 const Span = styled.span`
     font-weight:bolder;
+    color:white;
 
 `
 
@@ -170,6 +184,8 @@ const TLH2 = styled.h2`
     max-width:70%;
     font-size:1rem;
     width:70%;
+    color:white;
+    text-shadow:1px 1px 40px white;
 `
 
 const ParDiv = styled.div`
@@ -191,6 +207,12 @@ const IndivPars = styled.div`
 
 `
 
+const Img = styled.img`
+    height:100%;
+    width:100%;
+    border-radius:8px;
+`
+
 const ButtonBottom = styled.button `
     border:2px solid lightgray;
     border-radius:8px;
@@ -198,4 +220,5 @@ const ButtonBottom = styled.button `
     background:none;
     font-size:.8rem;
     width:25%;
+    margin-bottom:3rem;
 `
