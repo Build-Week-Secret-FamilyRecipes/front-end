@@ -16,7 +16,7 @@ function Header() {
             </Form>
             <Link class='linkButtons' to="/">Home</Link>
             <Link class='linkButtons' to="/login">Login</Link>
-            <Link to='/register'>Register</Link>
+            <Link class='linkButtons' to='/register'>Register</Link>
         </StyledHeader>
     )
 }
