@@ -147,7 +147,7 @@ const RightBottom = styled.div`
     align-items:center;
     width:100%;
     position:inherit;
-    margin-left:35%;
+    margin-left:40%;
     padding-bottom:2rem;
 `
 
