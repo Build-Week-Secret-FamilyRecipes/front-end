@@ -5,8 +5,10 @@ import styled from 'styled-components'
 
 
 function Header() {
+  
+
     return (
-        <StyledHeader>
+        <StyledHeader class='header'>
             <Form className = "search-bar">
                 <Input placeholder='Search Here!' className = "bar">
                 </Input>
@@ -22,12 +24,15 @@ function Header() {
 export default Header
 
 const StyledHeader = styled.div`
+    background:none;
     display:flex;
     position:fixed;
-    margin:0 0 0 50%;
+    margin:0 0 0 44.8%;
     padding:1rem;
 
 `
+
+
 
 const Form = styled.form`
     background:none;
@@ -42,6 +47,8 @@ const Input = styled.input`
     background:none;
     border-radius:8px;
     border:1px solid lightgray;
+    font-weight:bolder;
+    
 
 
 `

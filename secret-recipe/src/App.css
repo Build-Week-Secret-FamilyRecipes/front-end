@@ -1,10 +1,11 @@
-.linkButtons{
-
+.linkButtons {
+  display:flex;
+  flex-wrap:wrap;
   border:1px solid lightgray;
   border-radius:8px;
   padding:.4rem 2rem;
   text-decoration:none;
   font-size:1rem;
   margin:auto 0;
-  
 }
+
