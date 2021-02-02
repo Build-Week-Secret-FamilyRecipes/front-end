@@ -22,12 +22,15 @@ export default HomeLeft;
 const StyledPage = styled.div`
     position:fixed;
     background-repeat:no-repeat;
+    background-size:100%;
     background-image: url(${backgroundImage});
     width:35%;
     height:100%;
 `
 
 const StyledHeader = styled.h1`
+    display:flex;
+    flex-wrap:wrap;
     text-align:right;
     align-items:center;
     color:white;

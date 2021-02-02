@@ -87,7 +87,8 @@ const StyledPage = styled.div`
     flex-direction:row;
     font-weight:200;
     max-width:100%;
-    max-height:100vh;
+    padding:1rem;
+    width:60%;
     
 
 `

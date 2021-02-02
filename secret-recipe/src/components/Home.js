@@ -1,16 +1,26 @@
 import React from 'react';
 import HomeLeft from '../HomePieces/HomeLeft'
 import HomeRight from '../HomePieces/HomeRight'
+import styled from 'styled-components'
+
+
 
 const Home = () => {
 
     return(
-        <div>
+        <StyledHome>
             <HomeLeft/>
             <HomeRight/>
-        </div>
+        </StyledHome>
     )
 }
 
 export default Home;
 
+
+const StyledHome = styled.div`
+display:flex;
+flex-direction:column;
+flex-wrap:wrap;
+
+`
