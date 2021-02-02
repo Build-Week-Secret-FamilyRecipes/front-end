@@ -22,7 +22,7 @@ function Login(props) {
         e.preventDefault();
         axios.post("https://secret-family-recipes-be.herokuapp.com/api/auth/login", formValues)
         .then(res => {
-            localStorage.setItem('token', res.data.payload)
+            localStorage.setItem('token', res.data.token)
             props.history.push("/protected")
             console.log("success", res.data)
         })
@@ -31,7 +31,6 @@ function Login(props) {
         })
     }
     return (
-        localStorage.getItem(!'token') ? 
         <div>
             <form onSubmit = {login}>
                 <label> Username:
@@ -50,9 +49,6 @@ function Login(props) {
                 </label>
                 <button>Submit</button>
             </form>
-        </div> : 
-        <div>You are already logged in
-            <Link to='/protected'>Redirect to Dashboard</Link>
         </div>
     )
 }
