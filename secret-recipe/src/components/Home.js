@@ -14,11 +14,14 @@ const Home = () => {
     return(
         <StyledPage>
 
-            <LeftTop >
+        <TopContainer>
 
-                <TLH2><Span>Secret Family Recipes</Span>, your place for generation after generation of tradition</TLH2>
+            <TLH2><Span>Secret Family Recipes</Span>, your place for generation after generation of tradition</TLH2>    {/* TLH2 = TOP LEFT H2 */}
+            <BackgroundImg src={backgroundImage}/>
+    
 
-            </LeftTop>
+        </TopContainer>
+
 
            <RightBottom>
 
@@ -100,12 +103,14 @@ const StyledPage = styled.div`
 `
 
 const LeftTop = styled.div `
-    position:fixed;
+    position:inherit;
     display:flex;
-    max-width:40%;
-    height:1280px;
-    background-color:darkgray;
-    background-image: url(${backgroundImage});
+    color:red;
+    border:2px solid red;
+    width:15rem;
+    height:5rem;
+ 
+
 `
 
 const Span = styled.span`
@@ -114,11 +119,17 @@ const Span = styled.span`
 
 `
 
+const TopContainer = styled.div`
+    position:fixed;
+    height:100%;
+`
+
 const TopDiv = styled.div`
     display:flex;
     flex-direction:column;
     margin:10% 10%;
     width:80%;
+    position:relative;
     padding-bottom:2rem;
     border-bottom:2px solid lightgrey;
     font-size:.8rem;
@@ -145,16 +156,18 @@ const RightBottom = styled.div`
     flex-direction: column;
     align-content:center;
     align-items:center;
-    width:100%;
-    position:inherit;
-    margin-left:40%;
+    position:absolute;
+    width:65%;
+    margin-left:35%;
+    margin-top:2rem;
     padding-bottom:2rem;
 `
 
 const BottomDiv = styled.div`
     display:flex;
     flex-direction:column;
-    width:80%;
+    width:65%;
+    position:relative;
     align-items:left; 
 
 `
@@ -174,16 +187,15 @@ const H1 = styled.h1`
 `
 
 const H2 = styled.h2`
-  width:80%;
+  width:70%;
 `
 const TLH2 = styled.h2`
-    margin-top:12rem;
-    margin-left:5rem;
     text-align:right;
-    max-width:70%;
     font-size:1rem;
+    position: absolute;
     width:70%;
-    color:white;
+    margin-left:-20%;
+    color:red;
     text-shadow:1px 1px 40px white;
 `
 
@@ -200,11 +212,21 @@ const ParDiv = styled.div`
 const IndivPars = styled.div`
     justify-content:space-evenly;
     padding-right:5rem;
-    width:37%;
+    width:35%;
     padding-bottom:5rem;
     font-size:.8rem;
 
 `
+
+const BackgroundImg = styled.img`
+    position:relative;
+    background-repeat:no-repeat;
+    
+    width:auto;
+    height:100%;
+    
+`
+
 
 const Img = styled.img`
     height:100%;

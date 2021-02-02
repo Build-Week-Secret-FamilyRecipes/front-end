@@ -24,8 +24,10 @@ function Header() {
 export default Header
 
 const StyledHeader = styled.div`
-    background:none;
     display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    background:none;
     position:fixed;
     margin:0 0 0 44.8%;
     padding:1rem;
