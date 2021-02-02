@@ -29,7 +29,7 @@ const StyledHeader = styled.div`
     flex-wrap:wrap;
     background:none;
     position:fixed;
-    margin:0 0 0 44.8%;
+    margin:0 0 0 40.5%;
     padding:1rem;
 
 `

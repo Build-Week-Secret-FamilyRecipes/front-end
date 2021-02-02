@@ -16,9 +16,9 @@ const Home = () => {
 
         <TopContainer>
 
-            <TLH2><Span>Secret Family Recipes</Span>, your place for generation after generation of tradition</TLH2>    {/* TLH2 = TOP LEFT H2 */}
-            <BackgroundImg src={backgroundImage}/>
+            {/* <TLH2><Span>Secret Family Recipes</Span>, your place for generation after generation of tradition</TLH2>    TLH2 = TOP LEFT H2 */}
     
+            <BackgroundImg src={backgroundImage}/>
 
         </TopContainer>
 
@@ -120,8 +120,9 @@ const Span = styled.span`
 `
 
 const TopContainer = styled.div`
-    position:fixed;
+    position:absolute;
     height:100%;
+    width:100%;
 `
 
 const TopDiv = styled.div`
@@ -192,7 +193,7 @@ const H2 = styled.h2`
 const TLH2 = styled.h2`
     text-align:right;
     font-size:1rem;
-    position: absolute;
+    position: fixed;
     width:70%;
     margin-left:-20%;
     color:red;
@@ -219,11 +220,11 @@ const IndivPars = styled.div`
 `
 
 const BackgroundImg = styled.img`
-    position:relative;
+    position:fixed;
     background-repeat:no-repeat;
-    
     width:auto;
     height:100%;
+
     
 `
 
