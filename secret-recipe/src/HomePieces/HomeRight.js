@@ -143,15 +143,6 @@ const H1 = styled.h1`
 const H2 = styled.h2`
   width:70%;
 `
-const TLH2 = styled.h2`
-    text-align:right;
-    font-size:1rem;
-    position: fixed;
-    width:70%;
-    margin-left:-20%;
-    color:red;
-    text-shadow:1px 1px 40px white;
-`
 
 const ParDiv = styled.div`
     margin-top:2rem;
@@ -170,15 +161,6 @@ const IndivPars = styled.div`
     padding-bottom:5rem;
     font-size:.8rem;
 
-`
-
-const BackgroundImg = styled.img`
-    position:fixed;
-    background-repeat:no-repeat;
-    width:auto;
-    height:100%;
-
-    
 `
 
 
