@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import axios from "axios"
 import RecipeCard from "./RecipeCard"
+
 export default function ListOfRecipies() {
     const [recipes, setRecipes] = useState([])
     useEffect(() => {
