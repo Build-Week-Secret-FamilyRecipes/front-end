@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import axios from "axios"
-
+import { Link } from 'react-router-dom';
 
 const initialFormValues = {
     username: "",
@@ -22,7 +22,7 @@ function Login(props) {
         e.preventDefault();
         axios.post("https://secret-family-recipes-be.herokuapp.com/api/auth/login", formValues)
         .then(res => {
-            localStorage.setItem('token', res.data.payload)
+            localStorage.setItem('token', res.data.token)
             props.history.push("/protected")
             console.log("success", res.data)
         })
@@ -31,6 +31,7 @@ function Login(props) {
         })
     }
     return (
+         
         <div>
             <form onSubmit = {login}>
                 <label> Username:
@@ -49,7 +50,8 @@ function Login(props) {
                 </label>
                 <button>Submit</button>
             </form>
-        </div>
+        </div> 
+
     )
 }
 
