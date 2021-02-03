@@ -136,6 +136,9 @@ const Button = styled.button`
     margin-top:2rem;
     margin-bottom:2rem;
     width:20%;
+    border:solid 1px transparent;
+    background-clip: padding-box;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, .2);
 `
 
 const H1 = styled.h1`
@@ -161,7 +164,7 @@ const IndivPars = styled.div`
     width:35%;
     padding-bottom:5rem;
     font-size:.8rem;
-
+    
 `
 
 
@@ -179,4 +182,7 @@ const ButtonBottom = styled.button `
     font-size:.8rem;
     width:25%;
     margin-bottom:3rem;
+    border:solid 1px transparent;
+    background-clip: padding-box;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, .2);
 `

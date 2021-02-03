@@ -9,7 +9,7 @@ const HomeLeft = () => {
     return (
         <StyledPage>
             <StyledHeader>
-                <Span>Secret Family Recipes</Span>, your place for generation after generation of tradition
+                <Span>Secret Family Recipes</Span> your place for generation after generation of tradition
             </StyledHeader>
         </StyledPage>
     )
@@ -44,4 +44,5 @@ const StyledHeader = styled.h1`
 
 const Span = styled.span`
     font-weight:bolder;
+    font-size:1.5rem;
 `

@@ -56,6 +56,8 @@ const Input = styled.input`
     border:solid 1px transparent;
     background-clip: padding-box;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, .05);
+
+    
 `
 
 const Button = styled.button`
@@ -68,5 +70,4 @@ const Button = styled.button`
     border:solid 1px transparent;
     background-clip: padding-box;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, .05);
-
 `
