@@ -7,7 +7,7 @@ const initialFormValues = {
     name: '',
     phone: '',
     email: '',
-    age: null
+    age: ''
 };
 
 const Register = (props) => {
@@ -41,28 +41,28 @@ const Register = (props) => {
                 name='username'
                 value={formValues.username}
                 onChange={handleChange}
-                />
+                /><br></br>
                 <label>Password</label>
                 <input
                 type='password'
                 name='password'
                 value={formValues.password}
                 onChange={handleChange}
-                />
+                /><br></br>
                 <label>Real Name</label>
                 <input
                 type='text'
                 name='name'
                 value={formValues.name}
                 onChange={handleChange}
-                />
+                /><br></br>
                 <label>Phone Number</label>
                 <input
                 type='text'
                 name='phone'
                 value={formValues.phone}
                 onChange={handleChange}
-                />
+                /><br></br>
                 <label>Email</label>
                 <input
                 type='email'
@@ -72,7 +72,7 @@ const Register = (props) => {
                 />
                 <label>Age</label>
                 <input
-                type='text'
+                type='number'
                 name='age'
                 value={formValues.age}
                 onChange={handleChange}

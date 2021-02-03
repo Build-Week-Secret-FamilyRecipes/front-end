@@ -31,6 +31,7 @@ function Login(props) {
         })
     }
     return (
+         
         <div>
             <form onSubmit = {login}>
                 <label> Username:
@@ -49,7 +50,8 @@ function Login(props) {
                 </label>
                 <button>Submit</button>
             </form>
-        </div>
+        </div> 
+
     )
 }
 

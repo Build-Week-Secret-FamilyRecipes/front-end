@@ -6,6 +6,7 @@ import RecipeForm from "./components/RecipeForm"
 import Login from "./components/Login"
 import Register from './components/Register';
 import './App.css'
+import ListOfRecipies from "./components/ListOfRecipies"
 import styled from 'styled-components';
 
 
@@ -14,8 +15,9 @@ function App() {
 
     <StyledApp className="App">
       <Route exact path="/" component={Home} />
-      <Route exact path="/login" component={Login} />
+      <Route path="/login" component={Login} />
       <Route path='/register' component={Register} />
+      <Route path="/recipes" component = {ListOfRecipies}/>
       <PrivateRoute path = "/protected" component = {RecipeForm}/>
       <Header/>
 

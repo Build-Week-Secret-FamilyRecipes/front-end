@@ -5,18 +5,25 @@ import styled from 'styled-components'
 
 
 function Header() {
+    const logout = () => {
+        localStorage.removeItem('token');
+        window.location.href =  '/';
+      }; 
+
   
 
     return (
-        <StyledHeader class='header'>
+        <StyledHeader className='header'>
             <Form className = "search-bar">
                 <Input placeholder='Search Here!' className = "bar">
                 </Input>
                 <Button>Search</Button>
+                <Button onClick = {logout}>Logout</Button>
             </Form>
-            <Link class='linkButtons' to="/">Home</Link>
-            <Link class='linkButtons' to="/login">Login</Link>
-            <Link class='linkButtons' to='/register'>Register</Link>
+            <Link className='linkButtons' to="/">Home</Link>
+            <Link className='linkButtons' to="/login">Login</Link>
+            <Link className='linkButtons' to='/register'>Register</Link>
+            <Link className='linkButtons' to="/recipes">Recipes</Link>
         </StyledHeader>
     )
 }
