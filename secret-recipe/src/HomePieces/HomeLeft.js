@@ -22,10 +22,11 @@ export default HomeLeft;
 const StyledPage = styled.div`
     position:fixed;
     background-repeat:no-repeat;
-    background-size:100%;
+    background-size:cover;
     background-image: url(${backgroundImage});
     width:35%;
     height:100%;
+
 `
 
 const StyledHeader = styled.h1`
