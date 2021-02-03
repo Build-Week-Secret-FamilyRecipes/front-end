@@ -20,8 +20,7 @@ import axios from "axios"
 //ingredient_id
 
 //step_ingredients  yakes in step and ingredient id
-//ingredient_quantity
-
+//ingredient_quantity fuck
 
 const initialFormValues = {
     recipe_id:null,
