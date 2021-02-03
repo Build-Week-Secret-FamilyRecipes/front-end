@@ -1,6 +1,16 @@
-import React from 'react'
+import React, {useState} from 'react'
 
+const initialRecipe = {
+    recipe_name: "",
+    author: "",
+    category: "",
+    time: "",
+    ingredients: "",
+    steps:""
+}
 function RecipeCard(props) {
+    const [editing, setEditing] = useState(false);
+    const [rcipeToEdit, setRecipeToEdit] = useState(initialRecipe)
     return (
         <div>
             {props.recipe.author}<br></br>
@@ -10,7 +20,7 @@ function RecipeCard(props) {
             {props.recipe.steps}<br></br>
             {props.recipe.time}<br></br><br></br>
             <button onclick = {()=>{}}>Edit</button>
-            <button onClick = {()=> {}}>Delete</button>
+            <button onClick = {()=> {return <form><input></input></form>}}>Delete</button>
             <hr></hr>
         </div>
     )
