@@ -5,13 +5,18 @@ import styled from 'styled-components'
 
 
 
+
+
 const Home = () => {
 
     return(
         <StyledHome>
             <HomeLeft/>
             <HomeRight/>
+            
         </StyledHome>
+        
+
     )
 }
 
