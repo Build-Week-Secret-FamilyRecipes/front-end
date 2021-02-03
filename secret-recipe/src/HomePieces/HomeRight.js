@@ -89,7 +89,6 @@ const StyledPage = styled.div`
     max-width:100%;
     padding:1rem;
     width:60%;
-    
 
 `
 
@@ -134,8 +133,10 @@ const Button = styled.button`
     background:none;
     font-size:.8rem;
     margin-top:2rem;
+    width:30%;
+    min-width:125px;
     margin-bottom:2rem;
-    width:20%;
+    max-width:125px;
 `
 
 const H1 = styled.h1`
@@ -168,6 +169,7 @@ const IndivPars = styled.div`
 const Img = styled.img`
     height:100%;
     width:100%;
+    min-width:200px;
     border-radius:8px;
 `
 
@@ -179,4 +181,7 @@ const ButtonBottom = styled.button `
     font-size:.8rem;
     width:25%;
     margin-bottom:3rem;
+    width:30%;
+    min-width:125px;
+    max-width:125px;
 `

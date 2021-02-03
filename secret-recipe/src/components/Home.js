@@ -24,8 +24,6 @@ export default Home;
 
 
 const StyledHome = styled.div`
-display:flex;
-flex-direction:column;
-flex-wrap:wrap;
+
 
 `
