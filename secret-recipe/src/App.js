@@ -7,20 +7,21 @@ import Login from "./components/Login"
 import Register from './components/Register';
 import './App.css'
 import ListOfRecipies from "./components/ListOfRecipies"
+import styled from 'styled-components';
 
 
 function App() {
   return (
 
-    <div className="App">
-      <Header/>
+    <StyledApp className="App">
       <Route exact path="/" component={Home} />
       <Route path="/login" component={Login} />
       <Route path='/register' component={Register} />
       <Route path="/recipes" component = {ListOfRecipies}/>
       <PrivateRoute path = "/protected" component = {RecipeForm}/>
+      <Header/>
 
-    </div>
+    </StyledApp>
   );
 }
 
@@ -28,3 +29,6 @@ export default App;
 
 
 
+const StyledApp = styled.div`
+  max-width:100%;
+`

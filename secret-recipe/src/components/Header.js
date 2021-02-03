@@ -31,10 +31,12 @@ function Header() {
 export default Header
 
 const StyledHeader = styled.div`
-    background:none;
     display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    background:none;
     position:fixed;
-    margin:0 0 0 44.8%;
+    margin:0 0 0 41.5%;
     padding:1rem;
 
 `
@@ -51,19 +53,27 @@ const Form = styled.form`
 
 const Input = styled.input`
     padding:.5rem 2rem;
-    background:none;
+    background:rgba(255,255,255, .5);
     border-radius:8px;
-    border:1px solid lightgray;
     font-weight:bolder;
-    
-
-
+    font-size:1rem;
+    backdrop-filter: blur(5px);
+    color:black;
+    margin:auto 2px;
+    border:solid 1px transparent;
+    background-clip: padding-box;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, .05);
 `
 
 const Button = styled.button`
     padding: .5rem 2rem;
-    background:none;
-    border: 1px solid lightgray;
+    background:rgba(255,255,255, .5);
     border-radius:8px;
+    font-size:1rem;
+    backdrop-filter: blur(5px);
+    margin:auto 2px;
+    border:solid 1px transparent;
+    background-clip: padding-box;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, .05);
 
 `
