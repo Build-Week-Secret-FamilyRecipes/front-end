@@ -84,7 +84,7 @@ export default HomeRight;
 
 const StyledPage = styled.div`
     display:flex;
-    flex-direction:row;
+    flex-direction:row; 
     font-weight:200;
     max-width:100%;
     padding:1rem;

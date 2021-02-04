@@ -38,8 +38,9 @@ const StyledHeader = styled.div`
     flex-wrap:wrap;
     background:none;
     position:fixed;
+    width:95%;
     margin:0 0 0 0;
-    justify-content:space-around;
+    justify-content:space-between;
     padding:1rem;
 
 `
@@ -48,16 +49,16 @@ const StyledHeader = styled.div`
 
 const Form = styled.form`
     background:none;
+    margin-left:2%;
+
 `
 
 const LinkDiv = styled.div`
-    margin-left:7.5rem;
     display:flex;
     flex-direction:row;
     flex-wrap:wrap;
-    display:flex;
-    justify-content:space-around;
-    flex-direction:row;
+    margin-right:2.9%;
+    justify-content:space-between;
 `
 
 
@@ -70,7 +71,7 @@ const Input = styled.input`
     font-size:1rem;
     backdrop-filter: blur(5px);
     color:black;
-    margin:auto 2px;
+    margin:auto 0;
     border:solid 1px transparent;
     background-clip: padding-box;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, .05);
@@ -84,7 +85,6 @@ const SearchButton = styled.button`
     backdrop-filter: blur(5px);
     margin:auto 0;
     border:solid 1px transparent;
-    margin-left:70px;
     background-clip: padding-box;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, .05);
 

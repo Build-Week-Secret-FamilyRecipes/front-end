@@ -25,5 +25,4 @@ export default Home;
 
 const StyledHome = styled.div`
 
-
 `
