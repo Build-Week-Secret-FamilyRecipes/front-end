@@ -1,5 +1,7 @@
 import React, {useState} from 'react'
 import axios from "axios"
+import styled from 'styled-components';
+
 //recipe_id
 //recipe_name
 //author
@@ -56,54 +58,70 @@ function RecipeForm() {
       }
 
     return (
-        <div>
-            <form onSubmit = {onSubmit}>
+        <StyledContainer>
+            <StyledForm onSubmit = {onSubmit}>
                 <label>Recipe Name: 
-                    <input 
+                    <input className="inputs" 
                     type = "text"
                     name = "recipe_name"
                     values = {formValues.recipe_name}
                     onChange = {handleChange}/>
                 </label><br></br>
                 <label>Name: 
-                    <input 
+                    <input className="inputs" 
                         type = "text"
                         name = "author"
                         values = {formValues.author}
                         onChange = {handleChange}/>
                 </label><br></br>
                 <label>Category: 
-                    <input
+                    <input className="inputs"
                         type = "text"
                         name = "category"
                         values = {formValues.category}
                         onChange = {handleChange} />
                 </label><br></br>
                 <label>Time: 
-                    <input 
+                    <input className="inputs" 
                         type = "text"
                         name = "time"
                         values = {formValues.time}
                         onChange = {handleChange}/>
                 </label><br></br>
                 <label>Ingredients: 
-                    <input 
+                    <input className="inputs" 
                         type = "text"
                         name = "ingredients"
                         values = {formValues.ingredients}
                         onChange = {handleChange}/>
                 </label><br></br>
                 <label>Steps: 
-                    <input 
+                    <input className="inputs" 
                         type = "text"
                         name = "steps"
                         values = {formValues.steps}
                         onChange = {handleChange}/>
                 </label>
                 <button>Submit</button>
-            </form>
-        </div>
+            </StyledForm>
+        </StyledContainer>
     )
 }
 
 export default RecipeForm
+
+const StyledContainer = styled.div`
+    width: 40vw;
+    height: 60vh;
+    position: absolute;
+    top: 6%;
+    left: 28%;
+    display: flex;
+    align-items: center;
+`
+const StyledForm = styled.form`
+    margin: auto;
+    .inputs{
+        margin: 8% 0%;
+    }
+`
