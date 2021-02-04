@@ -14,12 +14,12 @@ function App() {
   return (
 
     <StyledApp className="App">
+      <Header/>
       <Route exact path="/" component={Home} />
       <Route path="/login" component={Login} />
       <Route path='/register' component={Register} />
       <Route path="/recipes" component = {ListOfRecipies}/>
       <PrivateRoute path = "/protected" component = {RecipeForm}/>
-      <Header/>
 
     </StyledApp>
   );
