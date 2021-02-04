@@ -5,18 +5,27 @@ import styled from 'styled-components'
 
 
 function Header() {
+    const logout = () => {
+        localStorage.removeItem('token');
+        window.location.href =  '/';
+      }; 
+
   
 
     return (
-        <StyledHeader class='header'>
+        <StyledHeader className='header'>
             <Form className = "search-bar">
                 <Input placeholder='Search Here!' className = "bar">
                 </Input>
-                <Button>Search</Button>
+                <SearchButton>Search</SearchButton>
             </Form>
-            <Link class='linkButtons' to="/">Home</Link>
-            <Link class='linkButtons' to="/login">Login</Link>
-            <Link class='linkButtons' to='/register'>Register</Link>
+            <LinkDiv>
+                <Link className='linkButtons' to="/">Home</Link>
+                <Link className='linkButtons' to="/login">Login</Link>
+                <Link className='linkButtons' to='/register'>Register</Link>
+                <Link className='linkButtons' to="/recipes">Recipes</Link>
+                <Button onClick = {logout}>Logout</Button>
+            </LinkDiv>
         </StyledHeader>
     )
 }
@@ -29,7 +38,8 @@ const StyledHeader = styled.div`
     flex-wrap:wrap;
     background:none;
     position:fixed;
-    margin:0 0 0 41.5%;
+    margin:0 0 0 0;
+    justify-content:space-around;
     padding:1rem;
 
 `
@@ -38,9 +48,17 @@ const StyledHeader = styled.div`
 
 const Form = styled.form`
     background:none;
-
 `
 
+const LinkDiv = styled.div`
+    margin-left:7.5rem;
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    display:flex;
+    justify-content:space-around;
+    flex-direction:row;
+`
 
 
 
@@ -58,13 +76,28 @@ const Input = styled.input`
     box-shadow: 3px 3px 3px rgba(0, 0, 0, .05);
 `
 
+const SearchButton = styled.button`
+    padding: .5rem 3rem;
+    background:rgba(255,255,255, .5);
+    border-radius:8px;
+    font-size:1rem;
+    backdrop-filter: blur(5px);
+    margin:auto 0;
+    border:solid 1px transparent;
+    margin-left:70px;
+    background-clip: padding-box;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, .05);
+
+`
+
+
 const Button = styled.button`
     padding: .5rem 2rem;
     background:rgba(255,255,255, .5);
     border-radius:8px;
     font-size:1rem;
     backdrop-filter: blur(5px);
-    margin:auto 2px;
+    margin:auto 0;
     border:solid 1px transparent;
     background-clip: padding-box;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, .05);
