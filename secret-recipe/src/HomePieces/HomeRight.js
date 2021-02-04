@@ -152,13 +152,14 @@ const ParDiv = styled.div`
     width:100%;
     align-items:center;
     flex-wrap:wrap;
-    justify-content:left;
+    justify-content:space-between;
   
 `
 
 const IndivPars = styled.div`
     justify-content:space-evenly;
-    padding-right:5rem;
+    padding-right:2rem;
+    padding-left:2rem;
     width:35%;
     padding-bottom:5rem;
     font-size:.8rem;
@@ -182,6 +183,6 @@ const ButtonBottom = styled.button `
     width:25%;
     margin-bottom:3rem;
     width:30%;
-    min-width:125px;
-    max-width:125px;
+    min-width:165px;
+    max-width:165px;
 `
