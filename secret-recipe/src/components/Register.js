@@ -49,7 +49,7 @@ const Register = (props) => {
     }
 
     return(
-        <StyledDiv>
+        <div>
             <StyledForm onSubmit={register}>
                 <label>Username</label>
                 <input
@@ -106,27 +106,42 @@ const Register = (props) => {
                     <button>Submit</button>
                 </div>
             </StyledForm>
-        </StyledDiv>
+        </div>
     )
 }
 
 export default Register;
 
 const StyledForm = styled.form`
-    width: 40%;
-    height: 80%;
+  display: flex;
+  flex-direction: column;
+  border: black 3px solid;
+  border-radius: 10px;
+  margin: auto;
+  padding: 1rem;
+  width: auto;
+  .warning {
+    color: red;
+    font-weight: bold;
+  }
+  .inputItem {
+    margin: 0.5rem;
+  }
+  .inputTerms {
+    margin: 0.5rem 0.5rem 0 0;
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-`
-
-const StyledDiv = styled.div`
-    display: flex;
-    align-items: center;
-    width: 35vw;
-    height: 70vh;
-    flex-wrap: wrap;
-    position: absolute;
-    left: 46%;
-    top: 11%;
-`
+    flex-direction: row-reverse;
+  }
+  .inputItem label {
+    float: left;
+  }
+  .inputItem input {
+    width: 100%;
+    margin-top: 0.5rem;
+    box-sizing: border-box; // needed to make input box fit inside div
+  }
+  .inputItem button {
+    float: right;
+    width: 5rem;
+  }
+`;

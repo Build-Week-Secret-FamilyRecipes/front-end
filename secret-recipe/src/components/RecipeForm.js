@@ -120,8 +120,35 @@ const StyledContainer = styled.div`
     align-items: center;
 `
 const StyledForm = styled.form`
-    margin: auto;
-    .inputs{
-        margin: 8% 0%;
-    }
-`
+  display: flex;
+  flex-direction: column;
+  border: black 3px solid;
+  border-radius: 10px;
+  margin: 1rem;
+  padding: 1rem;
+  width: auto;
+  .warning {
+    color: red;
+    font-weight: bold;
+  }
+  .inputItem {
+    margin: 0.5rem;
+  }
+  .inputTerms {
+    margin: 0.5rem 0.5rem 0 0;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .inputItem label {
+    float: left;
+  }
+  .inputItem input {
+    width: 100%;
+    margin-top: 0.5rem;
+    box-sizing: border-box; // needed to make input box fit inside div
+  }
+  .inputItem button {
+    float: right;
+    width: 5rem;
+  }
+`;
