@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import axios from "axios"
 import { Link } from 'react-router-dom';
+import styled from 'styled-components'
 
 const initialFormValues = {
     username: "",
@@ -32,27 +33,67 @@ function Login(props) {
     }
     return (
          
-        <div>
-            <form onSubmit = {login}>
-                <label> Username:
-                <input
+        <StyledDiv>
+            <Form onSubmit = {login}>
+                <StyledLabel> Username:
+                <Input
                     type = "text"
                     name = "username" 
                     values = {formValues.username}
                     onChange = {handleChange}/>
-                </label>
-                <label>Password:
-                <input
+                </StyledLabel>
+                <StyledLabel>Password:
+                <Input
                     type = "password"
                     name = "password"
                     values = {formValues.password}
                     onChange = {handleChange}/>
-                </label>
-                <button>Submit</button>
-            </form>
-        </div> 
+                </StyledLabel>
+                <StyledButton>Submit</StyledButton>
+            </Form>
+        </StyledDiv> 
 
     )
 }
 
 export default Login
+
+const StyledDiv = styled.div`
+    
+`
+
+const Form = styled.form`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    flex-direction: column;
+    text-align:left;
+
+`
+
+const Input = styled.input`
+    width:250px;
+    display:flex;
+    text-align:left;
+    border-radius:8px;
+    
+    border:none;
+    background-color: #ececec;
+    height:20px;
+    `
+
+const StyledLabel = styled.label`
+    text-align:left;
+    font-size:1.2rem;
+
+`
+const StyledButton = styled.button`
+    margin:10px;
+    width:80px;
+    height:30px;
+    border-radius:8px;
+    border:none;
+    background-color:white;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, .1);
+`
