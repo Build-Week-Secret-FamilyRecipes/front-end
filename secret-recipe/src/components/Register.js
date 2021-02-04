@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import axios from "axios"
+import styled from 'styled-components';
 
 const initialFormValues = {
     username: '',
@@ -7,17 +8,32 @@ const initialFormValues = {
     name: '',
     phone: '',
     email: '',
-    age: ''
+    age: null
 };
+
+const initialTerms = {
+    terms: false,
+}
 
 const Register = (props) => {
     const [formValues, setFormValues] = useState(initialFormValues);
+    const [terms, setTerms] = useState(initialTerms)
 
     const handleChange = (e) => {
         setFormValues({
             ...formValues,
             [e.target.name]: e.target.value
         })
+    };
+
+    const flipTerms = () => {
+        if(!terms) {
+            setTerms(true);
+        }
+        else if(terms) {
+            setTerms(false);
+        }
+        console.log(terms);
     };
 
     const register = (e) => {
@@ -33,36 +49,36 @@ const Register = (props) => {
     }
 
     return(
-        <div>
-            <form onSubmit={register}>
+        <StyledDiv>
+            <StyledForm onSubmit={register}>
                 <label>Username</label>
                 <input
                 type='text'
                 name='username'
                 value={formValues.username}
                 onChange={handleChange}
-                /><br></br>
+                />
                 <label>Password</label>
                 <input
                 type='password'
                 name='password'
                 value={formValues.password}
                 onChange={handleChange}
-                /><br></br>
+                />
                 <label>Real Name</label>
                 <input
                 type='text'
                 name='name'
                 value={formValues.name}
                 onChange={handleChange}
-                /><br></br>
+                />
                 <label>Phone Number</label>
                 <input
                 type='text'
                 name='phone'
                 value={formValues.phone}
                 onChange={handleChange}
-                /><br></br>
+                />
                 <label>Email</label>
                 <input
                 type='email'
@@ -72,15 +88,45 @@ const Register = (props) => {
                 />
                 <label>Age</label>
                 <input
-                type='number'
+                type='text'
                 name='age'
                 value={formValues.age}
                 onChange={handleChange}
                 />
-                <button>Submit</button>
-            </form>
-        </div>
+                <div>
+                    <label>terms and stuff</label>
+                    <input 
+                    type='checkbox'
+                    name='terms'
+                    checked={terms.terms}
+                    onChange={flipTerms}
+                    />
+                </div>
+                <div>
+                    <button>Submit</button>
+                </div>
+            </StyledForm>
+        </StyledDiv>
     )
 }
 
 export default Register;
+
+const StyledForm = styled.form`
+    width: 40%;
+    height: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+`
+
+const StyledDiv = styled.div`
+    display: flex;
+    align-items: center;
+    width: 35vw;
+    height: 70vh;
+    flex-wrap: wrap;
+    position: absolute;
+    left: 46%;
+    top: 11%;
+`
