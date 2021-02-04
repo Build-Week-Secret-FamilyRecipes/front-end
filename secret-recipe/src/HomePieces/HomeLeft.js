@@ -9,7 +9,7 @@ const HomeLeft = () => {
     return (
         <StyledPage>
             <StyledHeader>
-                <Span>Secret Family Recipes</Span>, your place for generation after generation of tradition
+                <Span>Secret Family Recipes</Span><br/> Your place for generation after generation of tradition 
             </StyledHeader>
         </StyledPage>
     )
@@ -23,6 +23,8 @@ const StyledPage = styled.div`
     position:fixed;
     background-repeat:no-repeat;
     background-size:cover;
+    justify-content:center;
+    align-items:center;
     background-image: url(${backgroundImage});
     width:35%;
     height:100%;
@@ -32,11 +34,12 @@ const StyledPage = styled.div`
 const StyledHeader = styled.h1`
     display:flex;
     flex-wrap:wrap;
-    text-align:right;
+    text-align:center;
+    padding-right:1rem;
     align-items:center;
     color:white;
     margin-left:10%;
-    font-size:1.3rem;
+    font-size:1.7rem;
     font-weight:400;
     justify-items:center;
     margin-top:50%;
@@ -45,4 +48,5 @@ const StyledHeader = styled.h1`
 
 const Span = styled.span`
     font-weight:bolder;
+    color:yellow;
 `

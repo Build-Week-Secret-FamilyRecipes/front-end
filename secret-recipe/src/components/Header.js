@@ -17,13 +17,15 @@ function Header() {
             <Form className = "search-bar">
                 <Input placeholder='Search Here!' className = "bar">
                 </Input>
-                <Button>Search</Button>
-                <Button onClick = {logout}>Logout</Button>
+                <SearchButton>Search</SearchButton>
             </Form>
-            <Link className='linkButtons' to="/">Home</Link>
-            <Link className='linkButtons' to="/login">Login</Link>
-            <Link className='linkButtons' to='/register'>Register</Link>
-            <Link className='linkButtons' to="/recipes">Recipes</Link>
+            <LinkDiv>
+                <Link className='linkButtons' to="/">Home</Link>
+                <Link className='linkButtons' to="/login">Login</Link>
+                <Link className='linkButtons' to='/register'>Register</Link>
+                <Link className='linkButtons' to="/recipes">Recipes</Link>
+                <Button onClick = {logout}>Logout</Button>
+            </LinkDiv>
         </StyledHeader>
     )
 }
@@ -36,7 +38,9 @@ const StyledHeader = styled.div`
     flex-wrap:wrap;
     background:none;
     position:fixed;
-    margin:0 0 0 41.5%;
+    width:95%;
+    margin:0 0 0 0;
+    justify-content:space-between;
     padding:1rem;
 
 `
@@ -45,9 +49,17 @@ const StyledHeader = styled.div`
 
 const Form = styled.form`
     background:none;
+    margin-left:2%;
 
 `
 
+const LinkDiv = styled.div`
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    margin-right:2.9%;
+    justify-content:space-between;
+`
 
 
 
@@ -59,11 +71,25 @@ const Input = styled.input`
     font-size:1rem;
     backdrop-filter: blur(5px);
     color:black;
-    margin:auto 2px;
+    margin:auto 0;
     border:solid 1px transparent;
     background-clip: padding-box;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, .05);
 `
+
+const SearchButton = styled.button`
+    padding: .5rem 3rem;
+    background:rgba(255,255,255, .5);
+    border-radius:8px;
+    font-size:1rem;
+    backdrop-filter: blur(5px);
+    margin:auto 0;
+    border:solid 1px transparent;
+    background-clip: padding-box;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, .05);
+
+`
+
 
 const Button = styled.button`
     padding: .5rem 2rem;
@@ -71,7 +97,7 @@ const Button = styled.button`
     border-radius:8px;
     font-size:1rem;
     backdrop-filter: blur(5px);
-    margin:auto 2px;
+    margin:auto 0;
     border:solid 1px transparent;
     background-clip: padding-box;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, .05);
