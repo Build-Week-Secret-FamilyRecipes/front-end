@@ -15,8 +15,8 @@ function App() {
   return (
 
     <StyledApp className="App">
-      <Header/>
       <Route exact path="/" component={Home} />
+      <Header/>
       <Route path="/login" component={Login} />
       <Route path='/register' component={Register} />
       <Route path="/recipes" component = {ListOfRecipies}/>
