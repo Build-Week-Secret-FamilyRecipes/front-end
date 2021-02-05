@@ -10,7 +10,9 @@ const initialRecipe = {
     steps:""
 }
 function RecipeCard(props) {
+    //eslint-disable-next-line
     const [editing, setEditing] = useState(false);
+    //eslint-disable-next-line
     const [rcipeToEdit, setRecipeToEdit] = useState(initialRecipe)
     return (
         <CardDiv>
