@@ -1,4 +1,5 @@
 import Home from './components/Home';
+//eslint-disable-next-line
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Header from "./components/Header"
 import PrivateRoute from "./components/PrivateRoute"
