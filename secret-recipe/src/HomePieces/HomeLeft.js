@@ -40,7 +40,7 @@ const StyledHeader = styled.h1`
     color:white;
     margin-left:10%;
     font-size:1.7rem;
-    font-weight:400;
+    font-weight:450;
     justify-items:center;
     margin-top:50%;
     width:75%;
@@ -48,5 +48,6 @@ const StyledHeader = styled.h1`
 
 const Span = styled.span`
     font-weight:bolder;
-    color:yellow;
+    color:white;
+    border-bottom: 2px solid white;
 `

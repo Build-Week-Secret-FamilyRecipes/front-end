@@ -36,14 +36,14 @@ function Login(props) {
         <StyledDiv>
             <Form onSubmit = {login}>
                 <StyledLabel> Username:
-                <Input
+                <StyledInput
                     type = "text"
                     name = "username" 
                     values = {formValues.username}
                     onChange = {handleChange}/>
                 </StyledLabel>
                 <StyledLabel>Password:
-                <Input
+                <StyledInput
                     type = "password"
                     name = "password"
                     values = {formValues.password}
@@ -72,12 +72,11 @@ const Form = styled.form`
 
 `
 
-const Input = styled.input`
+const StyledInput = styled.input`
     width:250px;
     display:flex;
     text-align:left;
     border-radius:8px;
-    
     border:none;
     background-color: #ececec;
     height:20px;
