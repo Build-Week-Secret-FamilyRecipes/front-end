@@ -122,7 +122,7 @@ const StyledForm = styled.form`
     margin: auto;
     padding: 1rem;
     width: auto;
-    
+        
         .warning {
             color: red;
             font-weight: bold;
