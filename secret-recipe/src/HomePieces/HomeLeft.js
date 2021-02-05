@@ -28,7 +28,7 @@ const StyledPage = styled.div`
     background-image: url(${backgroundImage});
     width:35%;
     height:100%;
-
+    z-index: 2;
 `
 
 const StyledHeader = styled.h1`

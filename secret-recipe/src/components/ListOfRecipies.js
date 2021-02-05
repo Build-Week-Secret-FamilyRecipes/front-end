@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import axios from "axios"
 import RecipeCard from "./RecipeCard"
+import styled from 'styled-components'
 
 export default function ListOfRecipies() {
     const [recipes, setRecipes] = useState([])
@@ -15,11 +16,15 @@ export default function ListOfRecipies() {
         })
     },[])
     return (
-        <div>
+        <RecipeDiv>
             {recipes.map(recipe => {
                 return <RecipeCard key={recipe.id} recipe = {recipe}/>
             })}
-        </div>
+        </RecipeDiv>
     )
 }
 
+const RecipeDiv = styled.div`
+    width:80%;
+    margin: auto;
+`

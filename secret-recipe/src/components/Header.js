@@ -42,7 +42,7 @@ const StyledHeader = styled.div`
     margin:0 0 0 0;
     justify-content:space-between;
     padding:1rem;
-
+    z-index: 1;
 `
 
 
