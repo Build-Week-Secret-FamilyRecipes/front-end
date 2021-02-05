@@ -51,50 +51,50 @@ const Register = (props) => {
     return(
         <div>
             <StyledForm onSubmit={register}>
-                <label>Username</label>
-                <input
+                <StyledLabel>Username</StyledLabel>
+                <StyledInput
                 type='text'
                 name='username'
                 value={formValues.username}
                 onChange={handleChange}
                 />
-                <label>Password</label>
-                <input
+                <StyledLabel>Password</StyledLabel>
+                <StyledInput
                 type='password'
                 name='password'
                 value={formValues.password}
                 onChange={handleChange}
                 />
-                <label>Real Name</label>
-                <input
+                <StyledLabel>Real Name</StyledLabel>
+                <StyledInput
                 type='text'
                 name='name'
                 value={formValues.name}
                 onChange={handleChange}
                 />
-                <label>Phone Number</label>
-                <input
+                <StyledLabel>Phone Number</StyledLabel>
+                <StyledInput
                 type='text'
                 name='phone'
                 value={formValues.phone}
                 onChange={handleChange}
                 />
-                <label>Email</label>
-                <input
+                <StyledLabel>Email</StyledLabel>
+                <StyledInput
                 type='email'
                 name='email'
                 value={formValues.email}
                 onChange={handleChange}
                 />
-                <label>Age</label>
-                <input
+                <StyledLabel>Age</StyledLabel>
+                <StyledInput
                 type='text'
                 name='age'
                 value={formValues.age}
                 onChange={handleChange}
                 />
                 <div>
-                    <label>terms and stuff</label>
+                    <label>Terms and Stuff</label>
                     <input 
                     type='checkbox'
                     name='terms'
@@ -103,7 +103,7 @@ const Register = (props) => {
                     />
                 </div>
                 <div>
-                    <button>Submit</button>
+                    <StyledButton>Submit</StyledButton>
                 </div>
             </StyledForm>
         </div>
@@ -113,35 +113,63 @@ const Register = (props) => {
 export default Register;
 
 const StyledForm = styled.form`
-  display: flex;
-  flex-direction: column;
-  border: black 3px solid;
-  border-radius: 10px;
-  margin: auto;
-  padding: 1rem;
-  width: auto;
-  .warning {
-    color: red;
-    font-weight: bold;
-  }
-  .inputItem {
-    margin: 0.5rem;
-  }
-  .inputTerms {
-    margin: 0.5rem 0.5rem 0 0;
     display: flex;
-    flex-direction: row-reverse;
-  }
-  .inputItem label {
-    float: left;
-  }
-  .inputItem input {
-    width: 100%;
-    margin-top: 0.5rem;
-    box-sizing: border-box; // needed to make input box fit inside div
-  }
-  .inputItem button {
-    float: right;
-    width: 5rem;
-  }
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    border-radius: 10px;
+    margin: auto;
+    padding: 1rem;
+    width: auto;
+    
+        .warning {
+            color: red;
+            font-weight: bold;
+        }
+        .inputItem {
+            margin: 0.5rem;
+        }
+        .inputTerms {
+            margin: 0.5rem 0.5rem 0 0;
+            display: flex;
+            flex-direction: row-reverse;
+        }
+        .inputItem label {
+            float: left;
+        }
+        .inputItem input {
+            width: 100%;
+            margin-top: 0.5rem;
+            box-sizing: border-box; // needed to make input box fit inside div
+        }
+        .inputItem button {
+            float: right;
+            width: 5rem;
+        }
 `;
+
+const StyledButton = styled.button`
+margin:10px;
+width:80px;
+height:30px;
+border-radius:8px;
+border:none;
+background-color:white;
+box-shadow: 3px 3px 3px rgba(0, 0, 0, .1);
+`
+
+const StyledLabel = styled.label`
+    text-align:left;
+    font-size:1.1rem;
+`
+
+const StyledInput = styled.input`
+    width:250px;
+    display:flex;
+    text-align:left;
+    border-radius:8px;
+    border:none;
+    background-color: #ececec;
+    height:20px;
+    `
